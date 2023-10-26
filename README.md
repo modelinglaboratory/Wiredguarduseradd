@@ -2,7 +2,7 @@
 
 A simple bash script to automate the addition of new peers to a WireGuard VPN server. The script generates the necessary keys, creates a configuration for the new user, and appends the peer information to the server's configuration.
 
-Features:
+## Features
 
 * Automatically generate private and public keys for new users.
 * Prompt the user for server-specific information like the server's public key and endpoint.
@@ -10,7 +10,7 @@ Features:
 * Create a user-specific configuration file for easy distribution.
 * Update the server's configuration and synchronize the changes.
 
-Usage:
+## Usage
 
 This repository provides scripts for automatic user addition to a WireGuard VPN server on Debian 12.
 
