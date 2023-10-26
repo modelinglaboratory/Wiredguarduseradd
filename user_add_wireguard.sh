@@ -43,9 +43,15 @@ wg syncconf wg0 <(wg-quick strip wg0)
 
 echo "New user successfully added. Configuration file: $CLIENT_IP-wg0.conf"
 
-# Display user details
-echo -e "\nUser Details:"
-echo "Private Key: $PRIVATE_KEY"
-echo "Public Key: $PUBLIC_KEY"
-echo "IP Address: $CLIENT_IP"
+# Display client configuration details
+echo -e "\n[Interface]
+PrivateKey = $PRIVATE_KEY
+Address = $CLIENT_IP/32
+DNS = 10.0.0.1
+
+[Peer]
+PublicKey = $SERVER_PUBLIC_KEY
+Endpoint = $SERVER_ENDPOINT
+AllowedIPs = 0.0.0.0/0
+PersistentKeepalive = 25"
 
